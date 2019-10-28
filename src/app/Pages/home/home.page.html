@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title >
+      Optical Character Recognition
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="outer-content">
+
+  <ion-card>
+    <ion-card-content>
+        <ion-img [src]="selectedImage"></ion-img>
+    </ion-card-content>
+   
+  </ion-card>
+
+  <ion-card *ngIf="imageText">
+    <ion-card-header>
+      Image Text
+    </ion-card-header>
+    <ion-card-content>
+      {{ imageText }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer >
+  <ion-toolbar color="light">
+      <ion-button ion-button expand="block" color="tertiary" (click)="onPickImage()">Pick Image</ion-button>
+      <ion-button *ngIf="selectedImage != 'assets/image/start.png'" ion-button expand="block"  color="danger" (click)="onDelImage()">Delete Image</ion-button>
+  </ion-toolbar>
+</ion-footer>
