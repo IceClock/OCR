@@ -1,0 +1,164 @@
+<ion-header >
+  <ion-toolbar mode="ios" color="dark">
+    <ion-title>Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class="outer-content">
+  <form #f="ngForm" >
+  <ion-card>
+      <ion-item lines="none">
+  <ion-label position="stacked" >Iidentification Number</ion-label>
+  <ion-input
+    type="tel"
+    [(ngModel)]="id" 
+    name="DocNumber"
+    required
+    DocNumber
+    #DocNumberCtrl="ngModel"
+    ></ion-input>
+  </ion-item>
+    </ion-card>
+
+<ion-card>
+    <ion-item>
+    <ion-label position="stacked" >الاسم الاول</ion-label>
+    <ion-input
+    [(ngModel)]="FirstAr" 
+    name="FirstAr"
+    required
+    FirstAr
+    #FirstArCtrl="ngModel"
+    ></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label position="stacked" >اسم الاب</ion-label>
+    <ion-input
+    [(ngModel)]="FatherAr" 
+    name="FatherAr"
+    required
+    FatherAr
+    #FatherArCtrl="ngModel"></ion-input>
+ 
+    </ion-item>
+    <ion-item>
+    <ion-label position="stacked" >اسم الجد</ion-label>
+    <ion-input
+    [(ngModel)]="MiddleAr" 
+    name="MiddleAr"
+    required
+    MiddleAr
+    #MiddleArCtrl="ngModel"
+    ></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+    <ion-label position="stacked" >اسم العائلة</ion-label>
+    <ion-input
+    [(ngModel)]="LastAr" 
+    name="LastAr"
+    required
+    LastAr
+    #LastArCtrl="ngModel"
+    ></ion-input>
+
+    </ion-item> 
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+    <ion-label position="stacked" >First Name</ion-label>
+    <ion-input
+    [(ngModel)]="FirstEn" 
+    name="FirstEn"
+    FirstEn
+    #FirstEnCtrl="ngModel"
+    required
+    type="text"
+     ></ion-input>
+    </ion-item>
+     <ion-item>
+    <ion-label position="stacked" >Father's Name</ion-label>
+    <ion-input
+    [(ngModel)]="FatherEn" 
+    name="FatherEn"
+    FatherEn
+    #FatherEnCtrl="ngModel"
+    required
+    ></ion-input>
+    </ion-item> 
+    <ion-item>
+    <ion-label position="stacked"  >Grandfather's Name</ion-label>
+    <ion-input
+    [(ngModel)]="MiddleEn" 
+    name="MiddleEn"
+    MiddleEn
+    #MiddleEnCtrl="ngModel"
+    required
+    ></ion-input>
+    </ion-item> 
+    <ion-item >
+    <ion-label position="stacked"  >Family Name</ion-label>
+    <ion-input
+    [(ngModel)]="LastEn"
+    name="LastEn"
+    LastEn
+    #LastEntrl="ngModel"
+    required
+    ></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="stacked"  >Mother Name/ اسم الام</ion-label>
+      <ion-input
+      [(ngModel)]="MotherName"
+      name="MotherName"
+      MotherName
+      #MotherNameCtrl="ngModel"
+      required
+      ></ion-input>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+    <ion-item>
+        <ion-label position="stacked">Birth Date</ion-label>
+        <ion-datetime 
+        [(ngModel)]="BirthDate"
+        name="BirthDate"
+        required
+        BirthDate
+        #BirthDateCtrl="ngModel"
+         ></ion-datetime>
+      </ion-item>
+      <ion-item>
+          <ion-label position="stacked">Birth Place</ion-label>
+          <ion-input 
+          [(ngModel)]="BirthPlace"
+          name="BirthPlace"
+          required
+          BirthPlace
+          #BirthPlaceCtrl="ngModel"
+           ></ion-input>
+        </ion-item>
+
+      <ion-item lines="none">
+          <ion-label position="stacked" >Gender</ion-label>
+          <ion-select  interface="action-sheet" position="full"
+          [(ngModel)]="Gender" 
+          name="Gender"
+          required
+          Gender
+          #GenderCtrl="ngModel"
+          >
+            <ion-select-option  class="text-wrap">M</ion-select-option>
+            <ion-select-option  class="text-wrap">F</ion-select-option>
+          </ion-select>
+          </ion-item>
+        </ion-card>
+
+
+  </form>
+  <ion-footer id="footer"> 
+      <ion-button id="bck" type="button"	color="dark" expand="block"
+      (click)="onClickBack(f)" >Go Back</ion-button>
+    </ion-footer>
+</ion-content>
+
